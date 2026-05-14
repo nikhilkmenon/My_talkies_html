@@ -1,0 +1,106 @@
+:root {
+  /* Premium luxury color palette - Deep dark with red, blue, white accents */
+  --background: oklch(0.08 0.002 0);
+  --foreground: oklch(0.98 0.001 0);
+  --card: oklch(0.12 0.002 0);
+  --card-foreground: oklch(0.98 0.001 0);
+  --popover: oklch(0.12 0.002 0);
+  --popover-foreground: oklch(0.98 0.001 0);
+
+  /* Primary - Rich Red/Crimson */
+  --primary: oklch(0.55 0.33 17);
+  --primary-foreground: oklch(0.98 0.001 0);
+
+  /* Secondary - Deep Blue */
+  --secondary: oklch(0.38 0.25 260);
+  --secondary-foreground: oklch(0.98 0.001 0);
+
+  /* Accent - Bright White/Platinum */
+  --accent: oklch(0.95 0.01 0);
+  --accent-foreground: oklch(0.08 0.002 0);
+
+  --muted: oklch(0.35 0.002 0);
+  --muted-foreground: oklch(0.75 0.01 0);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.001 0);
+  --border: oklch(0.2 0.002 0);
+  --input: oklch(0.15 0.001 0);
+  --ring: oklch(0.55 0.33 17);
+
+  --radius: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Geist', sans-serif;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Transitions */
+button, a, [role="button"] {
+  transition: all 0.3s ease-out;
+}

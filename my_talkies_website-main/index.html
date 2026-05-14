@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Talkies | Premium Home Theatre & Audio Systems</title>
+    <meta name="description" content="Experience luxury audio and home theatre systems. Premium speakers, amplifiers, and receivers engineered for perfection.">
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'oklch(0.08 0.002 0)',
+                        foreground: 'oklch(0.98 0.001 0)',
+                        card: 'oklch(0.12 0.002 0)',
+                        'card-foreground': 'oklch(0.98 0.001 0)',
+                        popover: 'oklch(0.12 0.002 0)',
+                        'popover-foreground': 'oklch(0.98 0.001 0)',
+                        primary: 'oklch(0.55 0.33 17)',
+                        'primary-foreground': 'oklch(0.98 0.001 0)',
+                        secondary: 'oklch(0.38 0.25 260)',
+                        'secondary-foreground': 'oklch(0.98 0.001 0)',
+                        accent: 'oklch(0.95 0.01 0)',
+                        'accent-foreground': 'oklch(0.08 0.002 0)',
+                        muted: 'oklch(0.35 0.002 0)',
+                        'muted-foreground': 'oklch(0.75 0.01 0)',
+                        destructive: 'oklch(0.577 0.245 27.325)',
+                        'destructive-foreground': 'oklch(0.98 0.001 0)',
+                        border: 'oklch(0.2 0.002 0)',
+                        input: 'oklch(0.15 0.001 0)',
+                        ring: 'oklch(0.55 0.33 17)',
+                    },
+                    fontFamily: {
+                        sans: ['Geist', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-background text-foreground antialiased font-sans">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-6" id="navbar">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center group">
+                    <img src="assets/logo.png" alt="My Talkies - Home Theatre Acoustics & AV Systems" width="180" height="60" class="h-12 w-auto group-hover:opacity-90 transition-opacity duration-300">
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+                                            <a href="#products" class="text-sm font-light text-muted-foreground hover:text-accent transition-colors duration-300 relative group">
+                            Products                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                                            <a href="#services" class="text-sm font-light text-muted-foreground hover:text-accent transition-colors duration-300 relative group">
+                            Services                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                                            <a href="#about" class="text-sm font-light text-muted-foreground hover:text-accent transition-colors duration-300 relative group">
+                            About                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                                    </div>
+
+                <div class="flex items-center gap-4">
+                    <button class="relative p-2 text-muted-foreground hover:text-accent transition-colors duration-300 group">
+                         <!-- Placeholder for cart or other icon if needed -->
+                    </button>
+                    <a href="tel:+917736090699" class="hidden md:block px-6 py-2.5 bg-gradient-to-r from-primary to-secondary text-accent rounded text-sm font-light tracking-wide hover:shadow-lg hover:shadow-primary/40 hover:scale-105 transition-all duration-300">
+                        Consult
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-accent hover:bg-primary/20 rounded transition-colors duration-300">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                        <i data-lucide="x" id="close-icon" class="hidden"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pt-6 border-t border-border/20 mt-6 space-y-4 animate-slideInLeft">
+                                    <a href="#products" class="block text-sm font-light text-muted-foreground hover:text-accent transition-colors duration-300 py-2">
+                        Products                    </a>
+                                    <a href="#services" class="block text-sm font-light text-muted-foreground hover:text-accent transition-colors duration-300 py-2">
+                        Services                    </a>
+                                    <a href="#about" class="block text-sm font-light text-muted-foreground hover:text-accent transition-colors duration-300 py-2">
+                        About                    </a>
+                            </div>
+        </div>
+    </nav>
+    <main>
+
+<!-- Hero Section -->
+<section class="pt-40 pb-32 px-6 md:px-12 overflow-hidden relative min-h-screen flex items-center">
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-40 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-20 animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div class="transition-all duration-1000 opacity-0 translate-y-12 animate-on-scroll">
+            <div class="space-y-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-1 h-8 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                    <p class="text-accent text-xs font-light tracking-widest uppercase">Bringing the Ultimate Cinema & Experience to You</p>
+                </div>
+
+                <h1 class="font-serif text-5xl md:text-7xl font-light leading-tight text-accent text-balance">
+                    Bringing the Ultimate <span class="block bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">Cinema & Experience</span> to You
+                </h1>
+
+                <p class="text-lg text-muted-foreground leading-relaxed max-w-xl font-light">
+                    We bring cinema to life. Using cutting-edge visuals, immersive surround sound, and seamless interior integration, we turn everyday spaces—apartments, villas, or private homes—into extraordinary cinematic environments.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-8">
+                    <a href="tel:+917736090699" class="group px-8 py-4 bg-gradient-to-r from-primary to-secondary text-accent rounded font-light tracking-wide text-sm hover:shadow-2xl hover:shadow-primary/50 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                        Explore Collection
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"></i>
+                    </a>
+                    <a href="tel:+917736090699" class="px-8 py-4 flex items-center justify-center bg-transparent border border-accent/40 text-accent rounded font-light tracking-wide text-sm hover:bg-accent/5 hover:border-accent/80 transition-all duration-300">
+                        Schedule Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="transition-all duration-1000 delay-300 opacity-0 translate-x-12 animate-on-scroll">
+            <div class="relative h-96 md:h-full min-h-96">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-transparent rounded-lg animate-glow opacity-50"></div>
+                <img src="assets/hero-bg.png" alt="Premium audio system" class="w-full h-full object-cover rounded-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+
+<section class="py-32 px-6 md:px-12 bg-gradient-to-b from-background via-card/30 to-background relative overflow-hidden" id="services">
+    <div class="absolute top-1/2 right-0 w-1/3 h-1/3 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/4"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+        <div class="mb-20 space-y-4">
+            <div class="flex items-center gap-3">
+                <div class="w-1 h-8 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                <p class="text-accent text-xs font-light tracking-widest uppercase">Why Choose My talkies</p>
+            </div>
+            <h2 class="font-serif text-5xl md:text-6xl font-light text-accent text-balance">Engineered Excellence</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="group p-8 rounded-lg border border-border/20 bg-card/40 backdrop-blur-sm hover:bg-card/60 hover:border-primary/30 transition-all duration-500 cursor-pointer opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 0ms;">
+                    <div class="mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-300">
+                            <i data-lucide="volume-2" class="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl font-light text-accent mb-3 group-hover:text-primary transition-colors duration-300">
+                        Custom-Designed                    </h3>
+                    <p class="text-muted-foreground font-light leading-relaxed text-sm text-left">
+                        Bring the big screen to your living room. Our custom-designed home theatres deliver cinema-quality visuals, immersive surround sound, and elegant interiors—crafted for the ultimate family entertainment experience.                    </p>
+                </div>
+                            <div class="group p-8 rounded-lg border border-border/20 bg-card/40 backdrop-blur-sm hover:bg-card/60 hover:border-primary/30 transition-all duration-500 cursor-pointer opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-300">
+                            <i data-lucide="zap" class="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl font-light text-accent mb-3 group-hover:text-primary transition-colors duration-300">
+                        Professional Audio Systems                    </h3>
+                    <p class="text-muted-foreground font-light leading-relaxed text-sm text-left">
+                        From auditoriums to churches and hotels, we design professional audio systems that ensure clarity, balance, and powerful sound across every corner of your venue. Every voice, every note, every word—heard perfectly.                    </p>
+                </div>
+                            <div class="group p-8 rounded-lg border border-border/20 bg-card/40 backdrop-blur-sm hover:bg-card/60 hover:border-primary/30 transition-all duration-500 cursor-pointer opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-300">
+                            <i data-lucide="palette" class="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl font-light text-accent mb-3 group-hover:text-primary transition-colors duration-300">
+                        Soundproofing And Acoustic                    </h3>
+                    <p class="text-muted-foreground font-light leading-relaxed text-sm text-left">
+                        Control noise. Enhance clarity. With state-of-the-art soundproofing and acoustic treatments, we transform your space into the perfect environment for movies, music, worship, or business gatherings.                    </p>
+                </div>
+                            <div class="group p-8 rounded-lg border border-border/20 bg-card/40 backdrop-blur-sm hover:bg-card/60 hover:border-primary/30 transition-all duration-500 cursor-pointer opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 300ms;">
+                    <div class="mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-300">
+                            <i data-lucide="smartphone" class="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl font-light text-accent mb-3 group-hover:text-primary transition-colors duration-300">
+                        Touch Control                    </h3>
+                    <p class="text-muted-foreground font-light leading-relaxed text-sm text-left">
+                        Control your entire audio-visual setup with a single touch. We integrate your system with smart home technology, giving you seamless access to sound, lighting, and visuals—all from your phone or tablet.                    </p>
+                </div>
+                            <div class="group p-8 rounded-lg border border-border/20 bg-card/40 backdrop-blur-sm hover:bg-card/60 hover:border-primary/30 transition-all duration-500 cursor-pointer opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 400ms;">
+                    <div class="mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-300">
+                            <i data-lucide="audio-waveform" class="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl font-light text-accent mb-3 group-hover:text-primary transition-colors duration-300">
+                        Custom Installations                    </h3>
+                    <p class="text-muted-foreground font-light leading-relaxed text-sm text-left">
+                        Every space is unique, and so are our solutions. From hidden speakers to automated theatre controls, our tailor-made installations combine performance with aesthetics—designed to match your lifestyle and interiors.                    </p>
+                </div>
+                            <div class="group p-8 rounded-lg border border-border/20 bg-card/40 backdrop-blur-sm hover:bg-card/60 hover:border-primary/30 transition-all duration-500 cursor-pointer opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 500ms;">
+                    <div class="mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-300">
+                            <i data-lucide="shield" class="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-xl font-light text-accent mb-3 group-hover:text-primary transition-colors duration-300">
+                        Hospitality Solutions                    </h3>
+                    <p class="text-muted-foreground font-light leading-relaxed text-sm text-left">
+                        For hotels, resorts, and restaurants, sound shapes guest experiences. Our premium audio and acoustic solutions create the perfect ambiance—whether its soothing background music or immersive event sound systems.                    </p>
+                </div>
+                    </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="py-32 px-6 md:px-12 min-h-screen bg-background relative overflow-hidden" id="services-gallery">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-20 space-y-4 text-center">
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-1 h-8 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                <p class="text-accent text-xs font-light tracking-widest uppercase">Our Expertise</p>
+                <div class="w-1 h-8 bg-gradient-to-b from-secondary to-primary rounded-full"></div>
+            </div>
+            <h2 class="font-serif text-5xl md:text-6xl font-light text-accent text-balance">Uncompromising Performance</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Home Theatres -->
+            <div class="group relative overflow-hidden rounded-lg bg-card/40 border border-border/20 hover:border-primary/40 transition-all duration-500 opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 0ms;">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="px-3 py-1 bg-background/80 backdrop-blur-md border border-primary/20 text-[10px] tracking-widest font-light text-primary rounded uppercase">CUSTOM</span>
+                </div>
+                <div class="h-[400px] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-60"></div>
+                    <img src="assets/home_theatre_1778511172642.png" alt="Home Theatres" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p class="text-primary text-xs tracking-widest uppercase mb-2">Residential</p>
+                    <h3 class="font-serif text-2xl text-accent mb-2 group-hover:text-primary transition-colors duration-300">Home Theatres</h3>
+                    <p class="text-muted-foreground font-light text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Bring the big screen to your living room. Our custom-designed home theatres deliver cinema-quality visuals, immersive surround sound, and elegant interiors.</p>
+                    <div class="pt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                        <button class="text-sm text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Studio Sound Proofing -->
+            <div class="group relative overflow-hidden rounded-lg bg-card/40 border border-border/20 hover:border-primary/40 transition-all duration-500 opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 150ms;">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="px-3 py-1 bg-background/80 backdrop-blur-md border border-primary/20 text-[10px] tracking-widest font-light text-primary rounded uppercase">ACOUSTICS</span>
+                </div>
+                <div class="h-[400px] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-60"></div>
+                    <img src="assets/studio_soundproofing_1778511193048.png" alt="Studio Sound Proofing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p class="text-primary text-xs tracking-widest uppercase mb-2">Professional</p>
+                    <h3 class="font-serif text-2xl text-accent mb-2 group-hover:text-primary transition-colors duration-300">Studio Sound Proofing</h3>
+                    <p class="text-muted-foreground font-light text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Control noise. Enhance clarity. With state-of-the-art soundproofing and acoustic treatments, we transform your space into the perfect environment for recording and mixing.</p>
+                    <div class="pt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                        <button class="text-sm text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Church & Auditorium -->
+            <div class="group relative overflow-hidden rounded-lg bg-card/40 border border-border/20 hover:border-primary/40 transition-all duration-500 opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 300ms;">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="px-3 py-1 bg-background/80 backdrop-blur-md border border-primary/20 text-[10px] tracking-widest font-light text-primary rounded uppercase">PRO AUDIO</span>
+                </div>
+                <div class="h-[400px] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-60"></div>
+                    <img src="assets/church_auditorium_1778511209336.png" alt="Church & Auditorium" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p class="text-primary text-xs tracking-widest uppercase mb-2">Large Venue</p>
+                    <h3 class="font-serif text-2xl text-accent mb-2 group-hover:text-primary transition-colors duration-300">Church & Auditorium</h3>
+                    <p class="text-muted-foreground font-light text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">We design professional audio systems that ensure clarity, balance, and powerful sound across every corner. Every voice, every note, every word—heard perfectly.</p>
+                    <div class="pt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                        <button class="text-sm text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotels & Bar Audio -->
+            <div class="group relative overflow-hidden rounded-lg bg-card/40 border border-border/20 hover:border-primary/40 transition-all duration-500 opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 450ms;">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="px-3 py-1 bg-background/80 backdrop-blur-md border border-primary/20 text-[10px] tracking-widest font-light text-primary rounded uppercase">HOSPITALITY</span>
+                </div>
+                <div class="h-[400px] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-60"></div>
+                    <img src="assets/aesthetic_hotel_bar.png" alt="Hotels & Bar Audio" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p class="text-primary text-xs tracking-widest uppercase mb-2">Commercial</p>
+                    <h3 class="font-serif text-2xl text-accent mb-2 group-hover:text-primary transition-colors duration-300">Hotels & Bar Audio</h3>
+                    <p class="text-muted-foreground font-light text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Sound shapes guest experiences. Our premium audio solutions create the perfect ambiance—whether its soothing background music or immersive event sound systems.</p>
+                    <div class="pt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                        <button class="text-sm text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Living Rooms -->
+            <div class="group relative overflow-hidden rounded-lg bg-card/40 border border-border/20 hover:border-primary/40 transition-all duration-500 opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 600ms;">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="px-3 py-1 bg-background/80 backdrop-blur-md border border-primary/20 text-[10px] tracking-widest font-light text-primary rounded uppercase">LIFESTYLE</span>
+                </div>
+                <div class="h-[400px] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-60"></div>
+                    <img src="assets/living_room_1778511269329.png" alt="Living Rooms" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p class="text-primary text-xs tracking-widest uppercase mb-2">Residential</p>
+                    <h3 class="font-serif text-2xl text-accent mb-2 group-hover:text-primary transition-colors duration-300">Living Rooms</h3>
+                    <p class="text-muted-foreground font-light text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Enhance your everyday entertainment with invisible architectural speakers and high-fidelity sound that perfectly complements your living space design.</p>
+                    <div class="pt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                        <button class="text-sm text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gaming Center -->
+            <div class="group relative overflow-hidden rounded-lg bg-card/40 border border-border/20 hover:border-primary/40 transition-all duration-500 opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 750ms;">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="px-3 py-1 bg-background/80 backdrop-blur-md border border-primary/20 text-[10px] tracking-widest font-light text-primary rounded uppercase">IMMERSIVE</span>
+                </div>
+                <div class="h-[400px] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-60"></div>
+                    <img src="assets/media__1778510996898.png" alt="Gaming Center" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p class="text-primary text-xs tracking-widest uppercase mb-2">Entertainment</p>
+                    <h3 class="font-serif text-2xl text-accent mb-2 group-hover:text-primary transition-colors duration-300">Gaming Center</h3>
+                    <p class="text-muted-foreground font-light text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Step inside the game with high-impact, low-latency audio setups designed for the ultimate competitive and immersive gaming experience.</p>
+                    <div class="pt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                        <button class="text-sm text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Podcast Studios -->
+            <div class="group relative overflow-hidden rounded-lg bg-card/40 border border-border/20 hover:border-primary/40 transition-all duration-500 opacity-0 translate-y-8 animate-on-scroll" style="transition-delay: 900ms;">
+                <div class="absolute top-4 right-4 z-20">
+                    <span class="px-3 py-1 bg-background/80 backdrop-blur-md border border-primary/20 text-[10px] tracking-widest font-light text-primary rounded uppercase">BROADCAST</span>
+                </div>
+                <div class="h-[400px] overflow-hidden relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 opacity-60"></div>
+                    <img src="assets/aesthetic_podcast_studio.png" alt="Podcast Studios" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p class="text-primary text-xs tracking-widest uppercase mb-2">Creator</p>
+                    <h3 class="font-serif text-2xl text-accent mb-2 group-hover:text-primary transition-colors duration-300">Podcast Studios</h3>
+                    <p class="text-muted-foreground font-light text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Broadcast-quality acoustics and multi-mic setups ensuring pristine vocal capture for content creators and professional podcasters.</p>
+                    <div class="pt-4 border-t border-white/5 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                        <button class="text-sm text-accent hover:text-primary transition-colors duration-300 flex items-center gap-2">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Innovation / About Section -->
+<section class="py-32 px-6 md:px-12 bg-gradient-to-b from-background via-card/20 to-background relative overflow-hidden" id="about">
+    <div class="absolute bottom-1/4 right-0 w-1/2 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/4"></div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+        <div class="mb-20 space-y-4">
+            <div class="flex items-center gap-3">
+                <div class="w-1 h-8 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                <p class="text-accent text-xs font-light tracking-widest uppercase">Our Philosophy</p>
+            </div>
+            <h2 class="font-serif text-5xl md:text-6xl font-light text-accent text-balance">
+                About Us
+            </h2>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+            <div class="space-y-8 order-2 md:order-1">
+                <p class="text-muted-foreground leading-relaxed font-light text-lg">
+                    At My Talkies, we believe sound is more than just audio—it’s an experience. With years of expertise in home entertainment systems, professional sound installations, and acoustic treatment, we are committed to creating environments where sound inspires, uplifts, and connects.
+                </p>
+                <p class="text-muted-foreground leading-relaxed font-light text-lg mt-4">
+                    Whether it’s designing a cinema-like theatre at home, enhancing worship with crystal-clear church acoustics, or optimizing the soundproofing of hotels and auditoriums, our mission is simple: to deliver sound that moves you.
+                </p>
+                <ul class="space-y-4">
+                                            <li class="flex gap-4 items-start group cursor-pointer">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5 group-hover:text-secondary transition-colors duration-300"></i>
+                            <span class="text-muted-foreground font-light group-hover:text-accent transition-colors duration-300">
+                                Precision: Every sound is tuned for clarity.                            </span>
+                        </li>
+                                            <li class="flex gap-4 items-start group cursor-pointer">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5 group-hover:text-secondary transition-colors duration-300"></i>
+                            <span class="text-muted-foreground font-light group-hover:text-accent transition-colors duration-300">
+                                Innovation: Using the latest global technologies.                            </span>
+                        </li>
+                                            <li class="flex gap-4 items-start group cursor-pointer">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5 group-hover:text-secondary transition-colors duration-300"></i>
+                            <span class="text-muted-foreground font-light group-hover:text-accent transition-colors duration-300">
+                                Customization: No two spaces are alike, and neither are our solutions.                            </span>
+                        </li>
+                                            <li class="flex gap-4 items-start group cursor-pointer">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5 group-hover:text-secondary transition-colors duration-300"></i>
+                            <span class="text-muted-foreground font-light group-hover:text-accent transition-colors duration-300">
+                                Experience: Helping homes and institutions bring their visions to life.                            </span>
+                        </li>
+                                    </ul>
+            </div>
+            <div class="relative h-96 md:h-full min-h-96 order-1 md:order-2 overflow-hidden rounded-lg group">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <img src="assets/about-us.png" alt="Manufacturing process" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="grid md:grid-cols-4 gap-8 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-xl p-12 border border-border/30 backdrop-blur-sm animate-on-scroll opacity-0 translate-y-8">
+                            <div class="text-center space-y-2 group cursor-pointer">
+                    <p class="font-serif text-5xl font-light text-primary group-hover:text-secondary transition-colors duration-300">
+                        <span data-counter="true" data-target-value="50">0</span>
+                        <span class="text-3xl">+</span>
+                    </p>
+                    <p class="text-muted-foreground font-light text-sm uppercase tracking-wide">Experts</p>
+                </div>
+                            <div class="text-center space-y-2 group cursor-pointer">
+                    <p class="font-serif text-5xl font-light text-primary group-hover:text-secondary transition-colors duration-300">
+                        <span data-counter="true" data-target-value="500">0</span>
+                        <span class="text-3xl">+</span>
+                    </p>
+                    <p class="text-muted-foreground font-light text-sm uppercase tracking-wide">Happy Clients</p>
+                </div>
+                            <div class="text-center space-y-2 group cursor-pointer">
+                    <p class="font-serif text-5xl font-light text-primary group-hover:text-secondary transition-colors duration-300">
+                        <span data-counter="true" data-target-value="15">0</span>
+                        <span class="text-3xl">+</span>
+                    </p>
+                    <p class="text-muted-foreground font-light text-sm uppercase tracking-wide">Experience</p>
+                </div>
+                            <div class="text-center space-y-2 group cursor-pointer">
+                    <p class="font-serif text-5xl font-light text-primary group-hover:text-secondary transition-colors duration-300">
+                        <span data-counter="true" data-target-value="2000">0</span>
+                        <span class="text-3xl">+</span>
+                    </p>
+                    <p class="text-muted-foreground font-light text-sm uppercase tracking-wide">Projects</p>
+                </div>
+                    </div>
+    </div>
+</section>
+
+
+<!-- Appointment / Contact Section -->
+<section class="py-20 px-6 md:px-12 bg-gradient-to-b from-card/40 to-background">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-5xl md:text-6xl font-light text-accent mb-4 text-balance">
+                What Are You Waiting For...
+            </h2>
+            <p class="text-2xl md:text-3xl font-light text-primary">Make An Appointment</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <!-- Location -->
+            <div class="bg-card/80 backdrop-blur-sm border border-border/30 rounded-lg p-8 hover:border-border/60 transition-all duration-300">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="p-3 bg-primary/20 rounded-lg">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-light text-accent mb-2">Our Location</h3>
+                        <p class="text-muted-foreground font-light leading-relaxed">
+                            VSRA-57A, Vennala, Kochi, Ernakulam, Kerala 682024
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="bg-card/80 backdrop-blur-sm border border-border/30 rounded-lg p-8 hover:border-border/60 transition-all duration-300">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="p-3 bg-primary/20 rounded-lg">
+                        <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-light text-accent mb-2">Contact Us</h3>
+                        <a href="tel:+917736090699" class="text-muted-foreground hover:text-primary transition-colors duration-300 font-light">
+                            +91 77360 90699
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center mt-12">
+            <a href="tel:+917736090699" class="inline-block px-8 py-3 bg-gradient-to-r from-primary to-secondary text-accent rounded text-sm font-light tracking-wide hover:shadow-lg hover:shadow-primary/40 hover:scale-105 transition-all duration-300">
+                Call Now to Book Your Appointment
+            </a>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <footer class="bg-card/60 border-t border-border/20 backdrop-blur-xl py-16 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto">
+            <!-- Footer Content -->
+            <div class="flex flex-col md:flex-row justify-between gap-12 mb-12">
+                <!-- Brand -->
+                <div class="space-y-4 max-w-sm">
+                    <img src="assets/logo.png" alt="My Talkies - Home Theatre Acoustics & AV Systems" width="160" height="54" class="h-11 w-auto">
+                    <p class="text-muted-foreground text-sm leading-relaxed font-light">
+                        One-stop destination for theatre audio systems, luxury home theatres, professional sound installations, and soundproofing solutions.
+                    </p>
+                </div>
+
+                <!-- Company -->
+                <div class="text-left md:text-right">
+                    <h3 class="font-serif text-sm font-light tracking-widest uppercase text-accent mb-6">Company</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="#about" class="text-muted-foreground hover:text-accent transition-colors duration-300 font-light">
+                                About
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-border/20 py-8 mb-8"></div>
+
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <p class="text-sm text-muted-foreground font-light">
+                    © 2025 My Talkies. All rights reserved. Crafted for perfection.
+                </p>
+                <div class="flex gap-6">
+                                            <button class="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded transition-all duration-300 hover:scale-110" aria-label="Facebook">
+                            <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                        </button>
+                                            <button class="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded transition-all duration-300 hover:scale-110" aria-label="Instagram">
+                            <i data-lucide="instagram" style="width: 20px; height: 20px;"></i>
+                        </button>
+                                            <button class="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded transition-all duration-300 hover:scale-110" aria-label="Twitter">
+                            <i data-lucide="twitter" style="width: 20px; height: 20px;"></i>
+                        </button>
+                                            <button class="p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded transition-all duration-300 hover:scale-110" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+                        </button>
+                                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
